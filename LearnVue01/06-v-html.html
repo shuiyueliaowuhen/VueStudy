@@ -1,0 +1,15 @@
+<body>
+    
+    <div id="app">
+        <h2 v-html="message"></h2>
+    </div>
+    <script src="../vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                message: "<a href='www.baidu.com'>百度一下</a>"
+            }
+        })
+    </script>
+</body>

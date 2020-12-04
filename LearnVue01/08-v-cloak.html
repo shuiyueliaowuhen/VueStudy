@@ -1,0 +1,22 @@
+<body>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+    <div id="app">
+        <h2 v-cloak>{{message}}</h2>
+    </div>
+    <script src="../vue.js"></script>
+    <script>
+        setTimeout(function(){
+            const app = new Vue({
+                el: "#app",
+                data: {
+                    message: "你好"
+                }
+            })
+        },1000)
+       
+    </script>
+</body>
