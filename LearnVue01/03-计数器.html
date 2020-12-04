@@ -1,0 +1,32 @@
+<body>
+
+    <div id="app">
+        <h1>计数器:{{counter}}</h1>
+        <!-- <button v-on:click="counter++">+</button>
+        <button v-on:click="counter--">-</button> -->
+        <button v-on:click="add">+</button>
+        <button @click="sub">-</button>
+    </div>
+
+
+    <script src="../vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            d: {
+                counter: 0
+            },
+            methods: {
+                add: function(){
+                    console.log("add执行");
+                    this.counter++;
+                },
+                sub: function(){
+                    console.log("sub执行");
+                    this.counter--;
+                }
+            }
+        })
+    </script>
+
+</body>

@@ -1,0 +1,19 @@
+<body>
+<script src="../vue.js"></script>
+
+<div id="app">
+    <ul>
+        <li v-for="item in moves">{{item}}</li>
+    </ul>
+</div>
+
+<script>
+
+    const app = new Vue({
+        el: "#app",
+        data: {
+            moves: ["火影忍者","七龙珠","一人之下"]
+        }
+    })
+</script>
+</body>
