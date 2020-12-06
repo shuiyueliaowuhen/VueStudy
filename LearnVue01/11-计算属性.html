@@ -1,0 +1,37 @@
+<body>
+    <style>
+    </style>
+    <div id="app">
+        <h2>{{fullName}}</h2>
+        <h2>总价格{{totalPrice}}</h2>
+    </div>
+    <script src="../vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                firstName: "火影",
+                secondName: "忍者",
+                books: [
+                    {id : '01',name : 'java入门到放弃',price : 2},
+                    {id : '02',name : 'vue入门到放弃',price : 2},
+                    {id : '03',name : 'hadoop入门到放弃',price : 2},
+                    {id : '04',name : 'mysql入门到放弃',price : 2} 
+                ]
+            },
+            computed: {
+                fullName: function(){
+                    return this.firstName + " " + this.secondName
+                },
+                totalPrice: function () {
+                    let total =0;
+                    for(let i = 0; i < this.books.length;i++){
+                        total += this.books[i].price
+                    }
+                    return total;
+                }
+            }
+        })
+       
+    </script>
+</body>
