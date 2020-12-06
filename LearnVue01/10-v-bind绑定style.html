@@ -1,0 +1,27 @@
+<body>
+    <style>
+    </style>
+    <div id="app">
+        <h2 :style="{fontSize: '50px'}">{{message}}</h2>
+        <h2 :style="{fontSize: finalSize}">{{message}}</h2>
+        <h2 :style="{fontSize: finalSizeAmount+'px'}">{{message}}</h2>
+        <h2 :style="getStyles()">{{message}}</h2>
+    </div>
+    <script src="../vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                message: "换换",
+                finalSize: "60px",
+                finalSizeAmount: 70
+            },
+            methods: {
+                getStyles: function(){
+                    return {fontSize:this.finalSize}
+                }
+            }
+        })
+       
+    </script>
+</body>
