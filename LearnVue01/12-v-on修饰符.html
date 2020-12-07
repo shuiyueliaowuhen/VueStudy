@@ -1,0 +1,44 @@
+<body>
+    <style>
+    </style>
+    <div id="app">
+        <div @click="divClick">
+            divdivdiv
+            <!-- .stop 使用 -->
+            <button @click.stop="buttonClick">stop</button>
+        </div>
+        
+        <!-- .prevent 使用 -->
+        <form action="baidu">
+            <input type="submit" @click.prevent="submitClick">
+        </form>
+
+        <!-- 监听某个按键 -->
+        <input type="text" @keyup.enter="keyup">
+
+        <!-- .once -->
+        <button @click.once="buttonClick">once</button>
+
+    </div>
+    <script src="../vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            methods: {
+                buttonClick(){
+                    console.log("buttonClick");
+                },
+                divClick(){
+                    console.log("divClick");
+                },
+                submitClick(){
+                    console.log("submitClick");
+                },
+                keyup(){
+                    console.log("keyup");
+                }
+            }
+        })
+       
+    </script>
+</body>
