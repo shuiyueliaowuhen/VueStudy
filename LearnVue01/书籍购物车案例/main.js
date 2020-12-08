@@ -34,7 +34,7 @@ const app = new Vue({
   },
   computed: {
     totalPrice(){
-      return this.list.reduce((price,item) => {return price + item.price},0 )
+      return this.list.reduce((price,item) => {return price + item.price * item.count},0 )
     }
   },
   methods: {
